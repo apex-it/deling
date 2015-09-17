@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="utf-8">
+
+  <title>deling.js</title>
+
+  <link rel="stylesheet" href="deling.css">
+  <style type="text/css">
+    a {
+      text-decoration: none;
+    }
+    .deling a {
+      display: inline-block;
+      font-size: 2rem;
+      margin: .25rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>deling.js</h1>
+
+  <p>
+    deling.js is a simple social share plugin with minimal fuzz.
+    deling.js is also easy to customize with options and CSS.
+  </p>
+
+  <h2>Usage</h2>
+  <p>
+    Include <code>deling.js</code> and <code>deling.css</code> in
+    your HTML. Add the class <code>deling</code> to any element that should get
+    the sharing icons/texts.
+  </p>
+
+  <p>
+    usage.js will by default use the current URL as the URL to share. You can
+    override/provide your own by adding the <code>data-url</code> attribute.
+  </p>
+
+  <h3>Usage after Pageload/DOMContentloaded</h3>
+  <p>
+    If you have dynamic pages or elements inserted late you can use
+    <code>deling(domElement);</code> to make deling.js create
+    sharing for your elements.
+  </p>
+
+  <h2>Example: Defaults</h2>
+  <p>
+    Insert all networks with defaults.
+  </p>
+  <pre>&lt;div class="deling"&gt;&lt;/div&gt;</pre>
+  <div class="deling"></div>
+
+  <h2>Example: Names</h2>
+  <p>
+    Insert all networks with names.
+  </p>
+  <pre>&lt;div class="deling" data-names="true"&gt;&lt;/div&gt;</pre>
+  <div class="deling" data-names="true"></div>
+
+  <h2>Example: No icons</h2>
+  <p>
+    Insert all networks without icons.
+  </p>
+  <pre>&lt;div class="deling" data-icons="true"&gt;&lt;/div&gt;</pre>
+  <div class="deling" data-icons="false" data-names="true"></div>
+
+  <h2>Example: Custom URL</h2>
+  <p>
+    Insert all networks with a custom URL.
+  </p>
+  <pre>&lt;div class="deling" data-url="https://www.heimdalit.no/"&gt;&lt;/div&gt;</pre>
+  <div class="deling" data-url="https://www.heimdalit.no"></div>
+
+  <h2>Example: Some networks</h2>
+  <p>
+    Insert some networks with a custom URL.
+  </p>
+  <pre>&lt;div class="deling" data-networks="twitter,google" data-url="https://www.heimdalit.no/"&gt;&lt;/div&gt;</pre>
+  <div class="deling" data-networks="twitter,google" data-url="https://www.heimdalit.no"></div>
+
+  <h2>Supported networks</h2>
+  <ul>
+    <li>Facebook</li>
+    <li>Twitter</li>
+    <li>Pinterest</li>
+    <li>LinkedIn</li>
+    <li>Google Plus</li>
+    <li>reddit</li>
+    <li>tumblr</li>
+    <li>Mail</li>
+  </ul>
+
+  <script src="deling.js"></script>
+</body>
+</html>
