@@ -17,6 +17,7 @@
     'pinterest': {
       url: 'https://pinterest.com/pin/create/button/?url=',
       title: 'Pinterest',
+      icon: 'pinterest-p',
     },
     'linkedin': {
       url: 'https://www.linkedin.com/shareArticle?url=',
