@@ -1,0 +1,31 @@
+{
+  "name": "deling.js",
+  "version": "1.0.0",
+  "description": "A simple share plugin with minimal fuzz.",
+  "main": "deling.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-uglify": "^1.4.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heimdalit/deling.git"
+  },
+  "keywords": [
+    "share",
+    "sharing",
+    "deling",
+    "social",
+    "social-networks"
+  ],
+  "author": "Heimdal IT",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/heimdalit/deling/issues"
+  },
+  "homepage": "https://github.com/heimdalit/deling#readme"
+}
