@@ -11,8 +11,9 @@ the element where you want deling.js to insert share links.
 
 deling.js is licensed under the MIT license.
 
-deling.js uses icons from [IcoMoon Free](https://icomoon.io/#icons-icomoon)
-licensed under the GPL license.
+deling.js uses icons from [Font Awesome](https://fortawesome.github.io/Font-Awesome/)
+licensed under the [SIL Open Font License](http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL).
+Icon files created with [Icomoon](https://icomoon.io).
 
 ## Contributing
 
