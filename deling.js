@@ -25,6 +25,7 @@
     'google': {
       url: 'https://plus.google.com/share?url=',
       title: 'Google Plus',
+      icon: 'google-plus',
     },
     'reddit': {
       url: 'https://www.reddit.com/submit?url=',
@@ -112,7 +113,7 @@
       if (settings.icons) {
         var icon = document.createElement('i');
 
-        icon.setAttribute('class', 'deling-icon deling-icon-' + n);
+        icon.setAttribute('class', 'deling-icon deling-icon-' + (network.icon || n));
 
         anchor.appendChild(icon);
       }
