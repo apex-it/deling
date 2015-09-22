@@ -39,6 +39,7 @@
     'mail': {
       url: 'mailto:?subject=&body=',
       title: 'Mail',
+      icon: 'envelope',
     },
   };
 
