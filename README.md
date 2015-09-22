@@ -5,7 +5,7 @@ deling.js is a simple share plugin with minimal fuzz.
 ## Usage
 
 Add `deling.js` and `deling.css` to your HTML page. Add the class `.deling` to
-the element where you want deling to insert share links.
+the element where you want deling.js to insert share links.
 
 ## License
 
