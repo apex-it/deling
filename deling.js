@@ -55,6 +55,7 @@
       icons: true,
       names: false,
       popup: true,
+      iconClass: 'deling-icon-',
     };
 
     for (var i = 0, j = element.attributes.length; i < j; i++) {
@@ -87,6 +88,10 @@
         case 'data-popup':
           settings.popup = element.attributes[i].value === 'true';
           break;
+
+        case 'data-icon-class':
+          settings.iconClass = element.attributes[i].value;
+          break;
       }
     }
 
@@ -115,7 +120,7 @@
       if (settings.icons) {
         var icon = document.createElement('i');
 
-        icon.setAttribute('class', 'deling-icon deling-icon-' + (network.icon || n));
+        icon.setAttribute('class', 'deling-icon ' + settings.iconClass + (network.icon || n));
 
         anchor.appendChild(icon);
       }
