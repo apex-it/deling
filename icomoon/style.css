@@ -1,16 +1,16 @@
 @font-face {
-	font-family: 'simple-share';
-	src:url('fonts/simple-share.eot?29ka4b');
-	src:url('fonts/simple-share.eot?#iefix29ka4b') format('embedded-opentype'),
-		url('fonts/simple-share.ttf?29ka4b') format('truetype'),
-		url('fonts/simple-share.woff?29ka4b') format('woff'),
-		url('fonts/simple-share.svg?29ka4b#simple-share') format('svg');
+	font-family: 'deling';
+	src:url('fonts/deling.eot?-bu6j8p');
+	src:url('fonts/deling.eot?#iefix-bu6j8p') format('embedded-opentype'),
+		url('fonts/deling.ttf?-bu6j8p') format('truetype'),
+		url('fonts/deling.woff?-bu6j8p') format('woff'),
+		url('fonts/deling.svg?-bu6j8p#deling') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 
-.simple-share-icon {
-	font-family: 'simple-share';
+.deling-icon {
+	font-family: 'deling';
 	speak: none;
 	font-style: normal;
 	font-weight: normal;
@@ -23,27 +23,27 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.simple-share-icon-mail:before {
-	content: "\e600";
-}
-.simple-share-icon-google-plus:before {
-	content: "\e601";
-}
-.simple-share-icon-facebook:before {
-	content: "\e602";
-}
-.simple-share-icon-twitter:before {
+.deling-icon-envelope:before {
 	content: "\e603";
 }
-.simple-share-icon-tumblr:before {
+.deling-icon-tumblr:before {
 	content: "\e604";
 }
-.simple-share-icon-reddit:before {
+.deling-icon-pinterest-p:before {
 	content: "\e605";
 }
-.simple-share-icon-linkedin2:before {
+.deling-icon-reddit:before {
 	content: "\e606";
 }
-.simple-share-icon-pinterest:before {
+.deling-icon-linkedin:before {
 	content: "\e607";
+}
+.deling-icon-twitter:before {
+	content: "\e602";
+}
+.deling-icon-google-plus:before {
+	content: "\e601";
+}
+.deling-icon-facebook:before {
+	content: "\e600";
 }
