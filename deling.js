@@ -23,10 +23,9 @@
       url: 'https://www.linkedin.com/shareArticle?url=',
       title: 'LinkedIn',
     },
-    'google': {
+    'google-plus': {
       url: 'https://plus.google.com/share?url=',
       title: 'Google Plus',
-      icon: 'google-plus',
     },
     'reddit': {
       url: 'https://www.reddit.com/submit?url=',
