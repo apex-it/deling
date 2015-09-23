@@ -23,10 +23,9 @@
       url: 'https://www.linkedin.com/shareArticle?url=',
       title: 'LinkedIn',
     },
-    'google': {
+    'google-plus': {
       url: 'https://plus.google.com/share?url=',
       title: 'Google Plus',
-      icon: 'google-plus',
     },
     'reddit': {
       url: 'https://www.reddit.com/submit?url=',
@@ -47,6 +46,10 @@
     return str.trim();
   }
 
+  function lowerCase (str) {
+    return str.toLowerCase();
+  }
+
   function getSettingsForElement (element) {
     // Defaults.
     var settings = {
@@ -63,7 +66,7 @@
 
       switch (name) {
         case 'data-networks':
-          var attributeNetworks = element.attributes[i].value.split(',').map(trim);
+          var attributeNetworks = element.attributes[i].value.split(',').map(trim).map(lowerCase);
 
           // Add only supported networks.
           for (var k = 0, l = attributeNetworks.length; k < l; k++) {
