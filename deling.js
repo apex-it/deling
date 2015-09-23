@@ -15,12 +15,12 @@
       title: 'Twitter',
     },
     'pinterest': {
-      url: 'https://pinterest.com/pin/create/button/?url={{url}}',
+      url: 'https://pinterest.com/pin/create/button/?url={{url}}&media={{media}}&title={{title}}',
       title: 'Pinterest',
       icon: 'pinterest-p',
     },
     'linkedin': {
-      url: 'https://www.linkedin.com/shareArticle?url={{url}}',
+      url: 'https://www.linkedin.com/shareArticle?mini=true&url={{url}}&title={{title}}&summary={{summary}}',
       title: 'LinkedIn',
     },
     'google-plus': {
@@ -32,7 +32,7 @@
       title: 'reddit',
     },
     'tumblr':   {
-      url: 'https://www.tumblr.com/share?v=3&u={{url}}',
+      url: 'https://www.tumblr.com/share?v=3&u={{url}}&t={{title}}',
       title: 'tumblr',
     },
     'mail': {
@@ -70,6 +70,9 @@
     // Defaults.
     var settings = {
       url: window.location.href,
+      title: '',
+      image: '',
+      summary: '',
       networks: [],
       icons: true,
       names: false,
@@ -111,6 +114,18 @@
         case 'data-icon-class':
           settings.iconClass = element.attributes[i].value;
           break;
+
+        case 'data-title':
+          settings.title = element.attributes[i].value;
+          break;
+
+        case 'data-media':
+          settings.media = element.attributes[i].value;
+          break;
+
+        case 'date-summary':
+          settings.summary = element.attributes[i].value;
+          break;
       }
     }
 
@@ -131,6 +146,9 @@
       anchor.setAttribute('class', 'deling-button network-' + n);
       anchor.setAttribute('href', replacer(network.url, {
         '{{url}}': settings.url,
+        '{{title}}': settings.title,
+        '{{image}}': settings.image,
+        '{{summary}}': settings.summary,
       }));
       anchor.setAttribute('title', network.title);
 
