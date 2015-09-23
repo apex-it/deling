@@ -110,7 +110,7 @@
           network = supportedNetworks[n];
 
       anchor.setAttribute('class', 'deling-button network-' + n);
-      anchor.setAttribute('href', network.url + settings.url);
+      anchor.setAttribute('href', network.url + encodeURI(settings.url));
       anchor.setAttribute('title', network.title);
 
       if (settings.popup) {
