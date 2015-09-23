@@ -46,6 +46,10 @@
     return str.trim();
   }
 
+  function lowerCase (str) {
+    return str.toLowerCase();
+  }
+
   function getSettingsForElement (element) {
     // Defaults.
     var settings = {
@@ -62,7 +66,7 @@
 
       switch (name) {
         case 'data-networks':
-          var attributeNetworks = element.attributes[i].value.split(',').map(trim);
+          var attributeNetworks = element.attributes[i].value.split(',').map(trim).map(lowerCase);
 
           // Add only supported networks.
           for (var k = 0, l = attributeNetworks.length; k < l; k++) {
