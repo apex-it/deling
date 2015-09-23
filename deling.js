@@ -42,6 +42,22 @@
     },
   };
 
+  function replacer (str, pairs) {
+    str = str.toString();
+
+    if (!pairs) {
+      return str;
+    }
+
+    Object.keys(pairs).forEach(function (key) {
+      var value = pairs[key];
+
+      str = str.replace(new RegExp(key, 'g'), value);
+    });
+
+    return encodeURI(str);
+  }
+
   function trim (str) {
     return str.trim();
   }
