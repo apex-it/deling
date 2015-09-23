@@ -7,36 +7,36 @@
 
   var supportedNetworks = {
     'facebook': {
-      url: 'https://www.facebook.com/share.php?u=',
+      url: 'https://www.facebook.com/share.php?u={{url}}',
       title: 'Facebook',
     },
     'twitter': {
-      url: 'https://twitter.com/intent/tweet?url=',
+      url: 'https://twitter.com/intent/tweet?url={{url}}',
       title: 'Twitter',
     },
     'pinterest': {
-      url: 'https://pinterest.com/pin/create/button/?url=',
+      url: 'https://pinterest.com/pin/create/button/?url={{url}}',
       title: 'Pinterest',
       icon: 'pinterest-p',
     },
     'linkedin': {
-      url: 'https://www.linkedin.com/shareArticle?url=',
+      url: 'https://www.linkedin.com/shareArticle?url={{url}}',
       title: 'LinkedIn',
     },
     'google-plus': {
-      url: 'https://plus.google.com/share?url=',
+      url: 'https://plus.google.com/share?url={{url}}',
       title: 'Google Plus',
     },
     'reddit': {
-      url: 'https://www.reddit.com/submit?url=',
+      url: 'https://www.reddit.com/submit?url={{url}}',
       title: 'reddit',
     },
     'tumblr':   {
-      url: 'https://www.tumblr.com/share?v=3&u=',
+      url: 'https://www.tumblr.com/share?v=3&u={{url}}',
       title: 'tumblr',
     },
     'mail': {
-      url: 'mailto:?subject=&body=',
+      url: 'mailto:?subject=&body={{url}}',
       title: 'Mail',
       icon: 'envelope',
     },
@@ -129,7 +129,9 @@
           network = supportedNetworks[n];
 
       anchor.setAttribute('class', 'deling-button network-' + n);
-      anchor.setAttribute('href', network.url + encodeURI(settings.url));
+      anchor.setAttribute('href', replacer(network.url, {
+        '{{url}}': settings.url,
+      }));
       anchor.setAttribute('title', network.title);
 
       if (settings.popup) {
