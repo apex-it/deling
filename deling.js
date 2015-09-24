@@ -7,40 +7,56 @@
 
   var supportedNetworks = {
     'facebook': {
-      url: 'https://www.facebook.com/share.php?u=',
+      url: 'https://www.facebook.com/share.php?u={{url}}',
       title: 'Facebook',
     },
     'twitter': {
-      url: 'https://twitter.com/intent/tweet?url=',
+      url: 'https://twitter.com/intent/tweet?url={{url}}',
       title: 'Twitter',
     },
     'pinterest': {
-      url: 'https://pinterest.com/pin/create/button/?url=',
+      url: 'https://pinterest.com/pin/create/button/?url={{url}}&media={{media}}&title={{title}}',
       title: 'Pinterest',
       icon: 'pinterest-p',
     },
     'linkedin': {
-      url: 'https://www.linkedin.com/shareArticle?url=',
+      url: 'https://www.linkedin.com/shareArticle?mini=true&url={{url}}&title={{title}}&summary={{summary}}',
       title: 'LinkedIn',
     },
     'google-plus': {
-      url: 'https://plus.google.com/share?url=',
+      url: 'https://plus.google.com/share?url={{url}}',
       title: 'Google Plus',
     },
     'reddit': {
-      url: 'https://www.reddit.com/submit?url=',
+      url: 'https://www.reddit.com/submit?url={{url}}',
       title: 'reddit',
     },
     'tumblr':   {
-      url: 'https://www.tumblr.com/share?v=3&u=',
+      url: 'https://www.tumblr.com/share?v=3&u={{url}}&t={{title}}',
       title: 'tumblr',
     },
     'mail': {
-      url: 'mailto:?subject=&body=',
+      url: 'mailto:?subject=&body={{url}}',
       title: 'Mail',
       icon: 'envelope',
     },
   };
+
+  function replacer (str, pairs) {
+    str = str.toString();
+
+    if (!pairs) {
+      return str;
+    }
+
+    Object.keys(pairs).forEach(function (key) {
+      var value = pairs[key];
+
+      str = str.replace(new RegExp(key, 'g'), value);
+    });
+
+    return encodeURI(str);
+  }
 
   function trim (str) {
     return str.trim();
@@ -54,6 +70,9 @@
     // Defaults.
     var settings = {
       url: window.location.href,
+      title: '',
+      image: '',
+      summary: '',
       networks: [],
       icons: true,
       names: false,
@@ -95,6 +114,18 @@
         case 'data-icon-class':
           settings.iconClass = element.attributes[i].value;
           break;
+
+        case 'data-title':
+          settings.title = element.attributes[i].value;
+          break;
+
+        case 'data-media':
+          settings.media = element.attributes[i].value;
+          break;
+
+        case 'date-summary':
+          settings.summary = element.attributes[i].value;
+          break;
       }
     }
 
@@ -113,7 +144,12 @@
           network = supportedNetworks[n];
 
       anchor.setAttribute('class', 'deling-button network-' + n);
-      anchor.setAttribute('href', network.url + encodeURI(settings.url));
+      anchor.setAttribute('href', replacer(network.url, {
+        '{{url}}': settings.url,
+        '{{title}}': settings.title,
+        '{{image}}': settings.image,
+        '{{summary}}': settings.summary,
+      }));
       anchor.setAttribute('title', network.title);
 
       if (settings.popup) {
