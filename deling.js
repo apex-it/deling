@@ -70,7 +70,7 @@
     // Defaults.
     var settings = {
       url: window.location.href,
-      title: '',
+      title: document.title,
       image: '',
       summary: '',
       networks: [],
