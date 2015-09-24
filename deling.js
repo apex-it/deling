@@ -11,7 +11,7 @@
       title: 'Facebook',
     },
     'twitter': {
-      url: 'https://twitter.com/intent/tweet?url={{url}}',
+      url: 'https://twitter.com/intent/tweet?url={{url}}&text={{title}}',
       title: 'Twitter',
     },
     'pinterest': {
@@ -32,7 +32,7 @@
       title: 'reddit',
     },
     'tumblr':   {
-      url: 'https://www.tumblr.com/share?v=3&u={{url}}&t={{title}}',
+      url: 'https://www.tumblr.com/share?v=3&u={{url}}&t={{title}}&content={{summary}}',
       title: 'tumblr',
     },
     'mail': {
