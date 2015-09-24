@@ -147,7 +147,7 @@
       anchor.setAttribute('href', replacer(network.url, {
         '{{url}}': settings.url,
         '{{title}}': settings.title,
-        '{{image}}': settings.image,
+        '{{media}}': settings.media,
         '{{summary}}': settings.summary,
       }));
       anchor.setAttribute('title', network.title);
