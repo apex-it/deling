@@ -15,7 +15,7 @@
       title: 'Twitter',
     },
     'pinterest': {
-      url: 'https://pinterest.com/pin/create/button/?url={{url}}&media={{media}}&title={{title}}',
+      url: 'https://pinterest.com/pin/create/button/?url={{url}}&media={{media}}&description={{title}}',
       title: 'Pinterest',
       icon: 'pinterest-p',
     },
