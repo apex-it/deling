@@ -32,7 +32,7 @@
       title: 'reddit',
     },
     'tumblr':   {
-      url: 'https://www.tumblr.com/share?v=3&u={{url}}&t={{title}}',
+      url: 'https://www.tumblr.com/share?v=3&u={{url}}&t={{title}}&content={{summary}}',
       title: 'tumblr',
     },
     'mail': {
