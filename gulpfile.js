@@ -19,3 +19,5 @@ gulp.task('css', function () {
     .pipe(uglifycss())
     .pipe(gulp.dest('.'));
 });
+
+gulp.task('default', ['js', 'css']);
