@@ -11,7 +11,7 @@
       title: 'Facebook',
     },
     'twitter': {
-      url: 'https://twitter.com/intent/tweet?url={{url}}',
+      url: 'https://twitter.com/intent/tweet?url={{url}}&text={{title}}',
       title: 'Twitter',
     },
     'pinterest': {
