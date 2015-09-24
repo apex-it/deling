@@ -123,7 +123,7 @@
           settings.media = element.attributes[i].value;
           break;
 
-        case 'date-summary':
+        case 'data-summary':
           settings.summary = element.attributes[i].value;
           break;
       }
@@ -147,7 +147,7 @@
       anchor.setAttribute('href', replacer(network.url, {
         '{{url}}': settings.url,
         '{{title}}': settings.title,
-        '{{image}}': settings.image,
+        '{{media}}': settings.media,
         '{{summary}}': settings.summary,
       }));
       anchor.setAttribute('title', network.title);
