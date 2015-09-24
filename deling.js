@@ -123,7 +123,7 @@
           settings.media = element.attributes[i].value;
           break;
 
-        case 'date-summary':
+        case 'data-summary':
           settings.summary = element.attributes[i].value;
           break;
       }
