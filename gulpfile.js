@@ -4,7 +4,9 @@
 var gulp = require('gulp'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
-    uglifycss = require('gulp-uglifycss');
+    uglifycss = require('gulp-uglifycss'),
+    karmaServer = require('karma').Server;
+
 
 gulp.task('js', function () {
   return gulp.src('deling.js')
@@ -21,3 +23,16 @@ gulp.task('css', function () {
 });
 
 gulp.task('default', ['js', 'css']);
+
+gulp.task('test', function (done) {
+  new karmaServer({
+    configFile: __dirname + '/karma.conf.js',
+  }, done).start();
+});
+
+gulp.task('test-run', function(done) {
+    new karmaServer({
+    configFile: __dirname + '/karma.conf.js',
+    singleRun: false,
+  }, done).start();
+});
