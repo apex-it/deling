@@ -1,4 +1,6 @@
 # deling.js
+[![Build Status](https://travis-ci.org/heimdalit/deling.svg?branch=master)](https://travis-ci.org/heimdalit/deling)
+[![devDependency Status](https://david-dm.org/heimdalit/deling/dev-status.svg)](https://david-dm.org/heimdalit/deling#info=devDependencies)
 
 deling.js is a simple share plugin with minimal fuzz.
 
