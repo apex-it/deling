@@ -1,0 +1,25 @@
+{
+  "name": "deling.js",
+  "main": "deling.js",
+  "version": "1.0.0",
+  "homepage": "https://github.com/heimdalit/deling",
+  "authors": [
+    "egilkh <egilkh@gmail.com>"
+  ],
+  "description": "deling.js is a simple share plugin with minimal fuzz.",
+  "keywords": [
+    "social",
+    "social-networks",
+    "deling",
+    "sharing",
+    "share"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
