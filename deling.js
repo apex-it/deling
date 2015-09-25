@@ -71,12 +71,13 @@
     var settings = {
       url: window.location.href,
       title: document.title,
-      image: '',
+      media: '',
       summary: '',
       networks: [],
       icons: true,
       names: false,
       popup: true,
+      color: true,
       iconClass: 'deling-icon-',
     };
 
@@ -126,6 +127,10 @@
         case 'data-summary':
           settings.summary = element.attributes[i].value;
           break;
+
+        case 'data-color':
+          settings.color = element.attributes[i].value === 'true';
+          break;
       }
     }
 
@@ -143,7 +148,7 @@
       var anchor = document.createElement('a'),
           network = supportedNetworks[n];
 
-      anchor.setAttribute('class', 'deling-button network-' + n);
+      anchor.setAttribute('class', 'deling-button ' + (settings.color ? 'deling-color ' : '') + 'network-' + n);
       anchor.setAttribute('href', replacer(network.url, {
         '{{url}}': settings.url,
         '{{title}}': settings.title,
@@ -203,6 +208,9 @@
   } else {
     throw new Error('deling.js requires a newish browser.');
   }
+
+  // Assign networks to deling to be able to change it.
+  deling.networks = supportedNetworks;
 
   // Assign a global for updates.
   window.deling = deling;

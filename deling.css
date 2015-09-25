@@ -21,35 +21,35 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.network-facebook {
+.deling-color.network-facebook {
   color: #3a5795;
 }
 
-.network-twitter {
+.deling-color.network-twitter {
   color: #55aaee;
 }
 
-.network-linkedin {
+.deling-color.network-linkedin {
   color: #007ab6;
 }
 
-.network-pinterest {
+.deling-color.network-pinterest {
   color: #c92027;
 }
 
-.network-google-plus {
+.deling-color.network-google-plus {
   color: #da4f46;
 }
 
-.network-reddit {
+.deling-color.network-reddit {
   color: #000;
 }
 
-.network-tumblr {
+.deling-color.network-tumblr {
   color: #34465d;
 }
 
-.network-mail {
+.deling-color.network-mail {
   color: #000;
 }
 
