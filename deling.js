@@ -71,7 +71,7 @@
     var settings = {
       url: window.location.href,
       title: document.title,
-      image: '',
+      media: '',
       summary: '',
       networks: [],
       icons: true,
