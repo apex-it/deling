@@ -209,6 +209,9 @@
     throw new Error('deling.js requires a newish browser.');
   }
 
+  // Assign networks to deling to be able to change it.
+  deling.networks = supportedNetworks;
+
   // Assign a global for updates.
   window.deling = deling;
 
