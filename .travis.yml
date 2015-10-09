@@ -1,9 +1,12 @@
 language: node_js
 sudo: false
 node_js:
-    - "0.12"
+- '0.12'
 install:
-    - npm install
+- npm install
 before_install:
-  - "export DISPLAY=:99.0"
-  - "sh -e /etc/init.d/xvfb start"
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
+notifications:
+  slack:
+    secure: xqyI3t9JmwyDuMrWXjw1/sYo/JX4k0LxUSc6s2H80I8CtsIGdAK7GXB1oNpLwvjeDmm3PXvUp7tGlBBikFdcf7e2ZEmxPYM7rTsN7m7P1ZUE+7++zI6bT6JnZrYPi7wDmZs2aPCWgqPvpWuJhhjZTDhfjiWneUAs4X5LHXe3b+XZEIWaizr4pzz7xBnTk4tNN9/C+dy1aGHAwLGrET7oORiUOqFaNnHv+ZkPB+YeiM0lorfZW6H6bqCWzwGfNhg3nWkIRSOJt+v6ZtgILmYfqo8Q4mlBMK/GmHuOm99b2iZaVtfzc5ke8n0zEeA+v12vxz/3EIIaQNRc9RWxq7aV2W9AiA+A0uwbdzmhg3cwKZ/SdVhh0uPp7H4UbdAeYWeMz84XjQwxZem5v9QAye2HgJB4neV2aATcw/1HbND8MmkWJEEZdeh58PIjwvnBpp9buTUneQ/EMke5sRAs8Sfd7vkpi3G61IsUfc2K+0LUlKuMIZikypjfMHOtGtFrG/q1jlm8YG2J0nOAtoUXkWQ7QCocfSv9eYwAeP/sAwxJ3eX71yuzCPhw5A3XR4WtG46xsP89mFhgyhiV4swXuLVwqocWU3TIK3iF8OEGIAN8xib9SYItWxIVRde82/UIGV9+vV39k8GYdD28tFiaexdmaczxCa2gxgNvUnjbtlichYg=
