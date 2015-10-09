@@ -41,9 +41,11 @@ Icon files created with [Icomoon](https://icomoon.io).
 
 Fork and create a pull request.
 
-## Reference
-[https://orkelbogen.no/](https://orkelbogen.no/)
+## References
+
+* [https://orkelbogen.no/](https://orkelbogen.no/)
 
 ## Contact us
+
 [mail@heimdalit.no](mailto:mail@heimdalit.no)
 [facebook.com/heimdalit](https://www.facebook.com/heimdalit)
