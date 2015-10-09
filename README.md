@@ -4,6 +4,22 @@
 
 deling.js is a simple share plugin with minimal fuzz.
 
+## Install
+
+You can get the latest release with [bower](http://bower.io/search/?q=deling.js) or [npm](https://www.npmjs.com/package/deling.js).
+
+### bower
+
+```
+bower install deling.js
+```
+
+### npm
+
+```
+npm install deling.js
+```
+
 ## Usage
 
 Add `deling.js` and `deling.css` to your HTML page. Add the class `.deling` to
