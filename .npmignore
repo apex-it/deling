@@ -1,2 +1,6 @@
 icomoon
 node_modules
+gulpfile.js
+index.html
+karma.conf.js
+test
