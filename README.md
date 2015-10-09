@@ -9,6 +9,10 @@ deling.js is a simple share plugin with minimal fuzz.
 Add `deling.js` and `deling.css` to your HTML page. Add the class `.deling` to
 the element where you want deling.js to insert share links.
 
+```
+<div class="deling"></div>
+```
+
 ## License
 
 deling.js is licensed under the MIT license.
@@ -20,3 +24,10 @@ Icon files created with [Icomoon](https://icomoon.io).
 ## Contributing
 
 Fork and create a pull request.
+
+## Reference
+[https://orkelbogen.no/](https://orkelbogen.no/)
+
+## Contact us
+[mail@heimdalit.no](mailto:mail@heimdalit.no)
+[facebook.com/heimdalit](https://www.facebook.com/heimdalit)
