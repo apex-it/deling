@@ -210,4 +210,14 @@ describe('deling.js', function() {
     }
   });
 
+  it('should allow a elements to be wrapped', function () {
+    var dd = createContainer({
+      'data-anchor-wrap': 'li',
+    });
+
+    for (var i = 0, j = dd.children.length; i < j; i++) {
+      expect(dd.children[i].tagName).to.be.equal('LI');
+    }
+  });
+
 });
