@@ -79,6 +79,7 @@
       popup: true,
       color: true,
       iconClass: 'deling-icon-',
+      anchorWrap: null,
     };
 
     for (var i = 0, j = element.attributes.length; i < j; i++) {
@@ -131,6 +132,10 @@
         case 'data-color':
           settings.color = element.attributes[i].value === 'true';
           break;
+
+        case 'data-anchor-wrap':
+          settings.anchorWrap = element.attributes[i].value;
+          break;
       }
     }
 
@@ -175,7 +180,13 @@
         anchor.appendChild(name);
       }
 
-      element.appendChild(anchor);
+      if (settings.anchorWrap) {
+        var wrap = document.createElement(settings.anchorWrap);
+        wrap.appendChild(anchor);
+        element.appendChild(wrap);
+      } else {
+        element.appendChild(anchor);
+      }
     });
   }
 
