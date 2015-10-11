@@ -79,6 +79,7 @@
       popup: true,
       color: true,
       iconClass: 'deling-icon-',
+      buttonClass: '',
       anchorWrap: null,
     };
 
@@ -136,6 +137,10 @@
         case 'data-anchor-wrap':
           settings.anchorWrap = element.attributes[i].value;
           break;
+
+        case 'data-button-class':
+          settings.buttonClass = ' ' + element.attributes[i].value;
+          break;
       }
     }
 
@@ -153,7 +158,7 @@
       var anchor = document.createElement('a'),
           network = supportedNetworks[n];
 
-      anchor.setAttribute('class', 'deling-button ' + (settings.color ? 'deling-color ' : '') + 'network-' + n);
+      anchor.setAttribute('class', 'deling-button ' + (settings.color ? 'deling-color ' : '') + 'network-' + n + settings.buttonClass);
       anchor.setAttribute('href', replacer(network.url, {
         '{{url}}': settings.url,
         '{{title}}': settings.title,
