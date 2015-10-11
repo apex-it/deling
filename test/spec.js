@@ -170,6 +170,15 @@ describe('deling.js', function() {
 
           expect(dd.firstChild.firstChild.className).to.be.equal('deling-icon custom-icon-class-' + iconName);
         });
+
+        it('should add extra class to button', function () {
+          var dd = createContainer({
+            'data-networks': n,
+            'data-button-class': 'awesome-o and friends',
+          });
+
+          expect(dd.firstChild.className).to.be.equal('deling-button deling-color network-' + n + ' awesome-o and friends');
+        });
       });
     });
 
