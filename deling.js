@@ -79,6 +79,8 @@
       popup: true,
       color: true,
       iconClass: 'deling-icon-',
+      buttonClass: '',
+      anchorWrap: null,
     };
 
     for (var i = 0, j = element.attributes.length; i < j; i++) {
@@ -131,6 +133,14 @@
         case 'data-color':
           settings.color = element.attributes[i].value === 'true';
           break;
+
+        case 'data-anchor-wrap':
+          settings.anchorWrap = element.attributes[i].value;
+          break;
+
+        case 'data-button-class':
+          settings.buttonClass = ' ' + element.attributes[i].value;
+          break;
       }
     }
 
@@ -148,7 +158,7 @@
       var anchor = document.createElement('a'),
           network = supportedNetworks[n];
 
-      anchor.setAttribute('class', 'deling-button ' + (settings.color ? 'deling-color ' : '') + 'network-' + n);
+      anchor.setAttribute('class', 'deling-button ' + (settings.color ? 'deling-color ' : '') + 'network-' + n + settings.buttonClass);
       anchor.setAttribute('href', replacer(network.url, {
         '{{url}}': settings.url,
         '{{title}}': settings.title,
@@ -175,7 +185,13 @@
         anchor.appendChild(name);
       }
 
-      element.appendChild(anchor);
+      if (settings.anchorWrap) {
+        var wrap = document.createElement(settings.anchorWrap);
+        wrap.appendChild(anchor);
+        element.appendChild(wrap);
+      } else {
+        element.appendChild(anchor);
+      }
     });
   }
 
