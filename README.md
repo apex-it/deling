@@ -48,5 +48,6 @@ Fork and create a pull request.
 
 ## Contact us
 
-[mail@heimdalit.no](mailto:mail@heimdalit.no)
-[facebook.com/heimdalit](https://www.facebook.com/heimdalit)
+* [mail@heimdalit.no](mailto:mail@heimdalit.no)
+* [facebook.com/heimdalit](https://www.facebook.com/heimdalit)
+* [twitter.com/heimdalit](https://twitter.com/heimdalit)
